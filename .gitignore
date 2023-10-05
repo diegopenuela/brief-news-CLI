@@ -1,0 +1,19 @@
+# macOS system files to ignore
+.DS_Store
+
+
+# Docker-specific files and directories
+docker-compose.override.yml
+.dockerignore
+docker-compose.yml
+docker-compose.override.yml
+docker-compose.yml
+
+
+# Docker-generated files and directories
+.docker/
+
+
+# Config files
+.env
+config.py
