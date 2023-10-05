@@ -29,10 +29,3 @@ def fetch_top_stories():
         # Handle exceptions (e.g., network issues)
         print(f"An error occurred: {str(e)}")
         return None
-
-# Example usage:
-if __name__ == "__main__":
-    top_stories = fetch_top_stories()
-    if top_stories:
-        for i, story in enumerate(top_stories, start=1):
-            print(f"{i}. {story['title']}")

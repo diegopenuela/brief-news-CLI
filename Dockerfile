@@ -20,6 +20,8 @@ ENV DEPLOYMENT_ENV=development
 # Expose any necessary ports
 # EXPOSE 8080
 
+# Set the cache directory environment variable
+ENV TRANSFORMERS_CACHE=/root/.cache/huggingface/transformers
 
 # Define the command to run your application
 CMD ["python", "brief-news-cli/cli.py"]
@@ -29,4 +31,6 @@ CMD ["python", "brief-news-cli/cli.py"]
 
 # Run the CLI:**
 # docker run -it brief-news-cli-image /bin/bash
+# docker run -v /Users/diegopenuela/Dev/huggingface/transformers:/root/.cache/huggingface/transformers -it brief-news-cli-image /bin/bash
+
 # python brief-news-cli/cli.py --help
