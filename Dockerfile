@@ -29,3 +29,4 @@ CMD ["python", "brief-news-cli/cli.py"]
 
 # Run the CLI:**
 # docker run -it brief-news-cli-image /bin/bash
+# python brief-news-cli/cli.py --help
