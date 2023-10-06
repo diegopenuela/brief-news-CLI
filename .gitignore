@@ -15,6 +15,7 @@ docker-compose.yml
 .env
 .env.*
 
+
 __pycache__
 *.pyc
 *.pyo
