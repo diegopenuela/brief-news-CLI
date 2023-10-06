@@ -13,3 +13,31 @@ docker-compose.yml
 
 # Config files
 .env
+.env.*
+
+__pycache__
+*.pyc
+*.pyo
+
+.pytest_cache/
+.coverage
+
+*.egg-info/
+dist/
+build/
+
+.vscode/
+.idea/
+.emacs.d/
+
+*.log
+*.swp
+*.swo
+
+*.so
+*.dll
+
+docs/_build/
+
+.bash_history
+.zsh_history
