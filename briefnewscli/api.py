@@ -1,17 +1,25 @@
 # api.py API integration functions
-
 import requests
-from config import NYTimes_API_KEY, NYTimes_API_TopStories_URL
+from decouple import config, UndefinedValueError
+
+try:
+    # Accessing variables from the .env file
+    api_key = config('NYT_API_KEY')
+    base_url = "https://api.nytimes.com/svc/topstories/v2/home.json"
+except UndefinedValueError:
+    # Handle the case where the environment variable is not defined
+    print("NYT_API_KEY environment variable is not defined.")
 
 def fetch_top_stories():
+    
     # Request parameters
     params = {
-        "api-key": NYTimes_API_KEY
+        "api-key": api_key
     }
 
     try:
         # Make the GET request to the API
-        response = requests.get(NYTimes_API_TopStories_URL, params=params)
+        response = requests.get(base_url, params=params)
 
         # Check if the request was successful
         if response.status_code == 200:

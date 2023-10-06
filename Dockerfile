@@ -27,10 +27,10 @@ ENV TRANSFORMERS_CACHE=/root/.cache/huggingface/transformers
 CMD ["python", "brief-news-cli/cli.py"]
 
 #Build the Docker Image:**
-# docker build -t brief-news-cli-image .
+# docker build -t briefnewscli-image .
 
 # Run the CLI:**
-# docker run -it brief-news-cli-image /bin/bash
-# docker run -v /Users/diegopenuela/Dev/huggingface/transformers:/root/.cache/huggingface/transformers -it brief-news-cli-image /bin/bash
+# docker run -it briefnewscli-image /bin/bash
+# docker run -v /Users/diegopenuela/Dev/huggingface/transformers:/root/.cache/huggingface/transformers -it briefnewscli-image /bin/bash
 
-# python brief-news-cli/cli.py --help
+# python briefnewscli/cli.py --help
